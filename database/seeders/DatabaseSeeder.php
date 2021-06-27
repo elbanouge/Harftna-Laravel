@@ -58,6 +58,96 @@ class DatabaseSeeder extends Seeder
             'subcategory_id' => 2
         ]);
 
+                Product::create([
+            'name' => 'HP LAPTOPS ',
+            'image' => 'product/qdzo36WWGu7zRTMGwC5XZasYKDgqGR1FT5l0dSM7.jpg',
+            'price' => rand(700, 1000),
+            'description' => 'This is the description of a product',
+            'additional_info' => 'This is additional info',
+            'category_id' => 1,
+            'subcategory_id' => 1
+        ]);
+
+        Product::create([
+            'name' => 'Dell LAPTOPS ',
+            'image' => 'product/Tmm9zdWnDZE4kdWui4Y3M8kCpaLmkG6UW3bULFcu.jpg',
+            'price' => rand(800, 1000),
+            'description' => 'This is the description of a product',
+            'additional_info' => 'This is additional info',
+            'category_id' => 1,
+            'subcategory_id' => 1
+        ]);
+
+        Product::create([
+            'name' => 'LENOVO LAPTOPS ',
+            'image' => 'product/qdzo36WWGu7zRTMGwC5XZasYKDgqGR1FT5l0dSM7.jpg',
+            'price' => rand(700, 1000),
+            'description' => 'This is the description of a product',
+            'additional_info' => 'This is additional info',
+            'category_id' => 1,
+            'subcategory_id' => 2
+        ]);
+
+                Product::create([
+            'name' => 'HP LAPTOPS ',
+            'image' => 'product/qdzo36WWGu7zRTMGwC5XZasYKDgqGR1FT5l0dSM7.jpg',
+            'price' => rand(700, 1000),
+            'description' => 'This is the description of a product',
+            'additional_info' => 'This is additional info',
+            'category_id' => 1,
+            'subcategory_id' => 1
+        ]);
+
+        Product::create([
+            'name' => 'Dell LAPTOPS ',
+            'image' => 'product/Tmm9zdWnDZE4kdWui4Y3M8kCpaLmkG6UW3bULFcu.jpg',
+            'price' => rand(800, 1000),
+            'description' => 'This is the description of a product',
+            'additional_info' => 'This is additional info',
+            'category_id' => 1,
+            'subcategory_id' => 1
+        ]);
+
+        Product::create([
+            'name' => 'LENOVO LAPTOPS ',
+            'image' => 'product/qdzo36WWGu7zRTMGwC5XZasYKDgqGR1FT5l0dSM7.jpg',
+            'price' => rand(700, 1000),
+            'description' => 'This is the description of a product',
+            'additional_info' => 'This is additional info',
+            'category_id' => 1,
+            'subcategory_id' => 2
+        ]);
+
+                Product::create([
+            'name' => 'HP LAPTOPS ',
+            'image' => 'product/qdzo36WWGu7zRTMGwC5XZasYKDgqGR1FT5l0dSM7.jpg',
+            'price' => rand(700, 1000),
+            'description' => 'This is the description of a product',
+            'additional_info' => 'This is additional info',
+            'category_id' => 1,
+            'subcategory_id' => 1
+        ]);
+
+        Product::create([
+            'name' => 'Dell LAPTOPS ',
+            'image' => 'product/Tmm9zdWnDZE4kdWui4Y3M8kCpaLmkG6UW3bULFcu.jpg',
+            'price' => rand(800, 1000),
+            'description' => 'This is the description of a product',
+            'additional_info' => 'This is additional info',
+            'category_id' => 1,
+            'subcategory_id' => 1
+        ]);
+
+        Product::create([
+            'name' => 'LENOVO LAPTOPS ',
+            'image' => 'product/qdzo36WWGu7zRTMGwC5XZasYKDgqGR1FT5l0dSM7.jpg',
+            'price' => rand(700, 1000),
+            'description' => 'This is the description of a product',
+            'additional_info' => 'This is additional info',
+            'category_id' => 1,
+            'subcategory_id' => 2
+        ]);
+
         User::create([
             'name' => 'Admin',
             'email' => 'admin@gmail.com',

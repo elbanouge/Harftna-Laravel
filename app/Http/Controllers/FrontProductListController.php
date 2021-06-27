@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Slider;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Subcategory;
@@ -18,10 +19,9 @@ class FrontProductListController extends Controller
             array_push($randomActiveProductIds, $product->id);
         }
         $randomItemProducts = Product::whereNotIn('id', $randomActiveProductIds)->limit(3)->get();
-        // $sliders = Slider::get();
+        $sliders = Slider::get();
 
-        // return view('product', compact('products', 'randomItemProducts', 'randomActiveProducts', 'sliders'));
-        return view('product', compact('products', 'randomItemProducts', 'randomActiveProducts'));
+        return view('product', compact('products', 'randomItemProducts', 'randomActiveProducts', 'sliders'));
     }
 
     public function show($id)

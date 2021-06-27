@@ -8,18 +8,16 @@
                 <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
 
                     <div class="carousel-inner">
-                        {{-- @if (count($sliders) > 0)
-    @foreach ($sliders as $key => $slider)
+                        @if (count($sliders) > 0)
+                            @foreach ($sliders as $key => $slider)
 
-    <div class="carousel-item {{$key == 0 ? 'active' : ''}} ">
-      <img src="{{Storage::url($slider->image)}}" >
-    </div>
-    @endforeach
-    @endif --}}
-
-
-
+                                <div class="carousel-item {{ $key == 0 ? 'active' : '' }} ">
+                                    <img src="{{ Storage::url($slider->image) }}">
+                                </div>
+                            @endforeach
+                        @endif
                     </div>
+
                     <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
@@ -30,7 +28,7 @@
                     </a>
                 </div>
             </div>
- 
+
             <div class="container">
                 <h2>Category</h2>
                 @foreach (App\Models\Category::all() as $cat)
@@ -59,9 +57,8 @@
                                                             type="button"
                                                             class="btn btn-sm btn-outline-success">View</button>
                                                     </a>
-                                                    <a href="{{ route('add.cart', [$product->id]) }}"> <button
-                                                            type="button" class="btn btn-sm btn-outline-primary">Add to
-                                                            cart</button></a>
+                                                    <a href="{{ route('add.cart', [$product->id]) }}"> <button type="button"
+                                                            class="btn btn-sm btn-outline-primary">Add to cart</button></a>
                                                 </div>
                                                 <small class="text-muted">${{ $product->price }}</small>
                                             </div>
@@ -72,9 +69,11 @@
                         </div>
                     </div>
                     <center>
-                        {{-- <a href="{{route('more.product')}}"><button class="btn btn-success">More Product</button> --}}
+                        <a href="{{ route('more.product') }}"><button class="btn btn-success">More Product</button>
                         </a>
                     </center>
+
+
 
                 </div>
 
@@ -95,13 +94,14 @@
                                                     </p>
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <div class="btn-group">
-                                                            <a href="{{ route('product.view', [$product->id]) }}">
-                                                                <button type="button"
-                                                                    class="btn btn-sm btn-outline-success">View</button></a>
-                                                            <a href="{{ route('add.cart', [$product->id]) }}">
-                                                                <button type="button"
-                                                                    class="btn btn-sm btn-outline-primary">Add to
-                                                                    cart</button></a>
+                                                            <button type="button"
+                                                                class="btn btn-sm btn-outline-success">View</button>
+                                                            <a href="">
+                                                                <a href="{{ route('add.cart', [$product->id]) }}"> <button
+                                                                        type="button"
+                                                                        class="btn btn-sm btn-outline-primary">Add to
+                                                                        cart</button></a>
+                                                            </a>
                                                         </div>
                                                         <small class="text-muted">${{ $product->price }}</small>
                                                     </div>
@@ -127,8 +127,8 @@
                                                     </p>
                                                     <div class="d-flex justify-content-between align-items-center">
                                                         <div class="btn-group">
-                                                            <a href="{{ route('product.view', [$product->id]) }}">
-                                                                <button type="button"
+                                                            <a href="{{ route('product.view', [$product->id]) }}"> <button
+                                                                    type="button"
                                                                     class="btn btn-sm btn-outline-success">View</button></a>
                                                             <a href="{{ route('add.cart', [$product->id]) }}"> <button
                                                                     type="button" class="btn btn-sm btn-outline-primary">Add

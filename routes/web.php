@@ -38,6 +38,8 @@ Route::post('/product', 'App\Http\Controllers\CartController@CleanCart')->name('
 
 Auth::routes();
 
+
+Route::get('all/products','App\Http\Controllers\FrontProductListController@moreProducts')->name('more.product');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(
@@ -51,5 +53,17 @@ Route::group(
         Route::resource('category', 'App\Http\Controllers\CategoryController');
         Route::resource('subcategory', 'App\Http\Controllers\SubcategoryController');
         Route::resource('product', 'App\Http\Controllers\ProductController');
+
+        Route::get('slider/create', 'App\Http\Controllers\SliderController@create')->name('slider.create');
+        Route::get('slider', 'App\Http\Controllers\SliderController@index')->name('slider.index');
+        Route::post('slider', 'App\Http\Controllers\SliderController@store')->name('slider.store');
+        Route::delete('slider/{id}', 'App\Http\Controllers\SliderController@destroy')->name('slider.destroy');
+
+        Route::get('users','UserController@index')->name('user.index');
+
+        //orders
+        Route::get('/orders','CartController@userOrder')->name('order.index');
+        Route::get('/orders/{userid}/{orderid}','CartController@viewUserOrder')->name('user.order');
+
     }
 );
