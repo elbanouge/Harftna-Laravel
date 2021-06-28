@@ -59,11 +59,11 @@ Route::group(
         Route::post('slider', 'App\Http\Controllers\SliderController@store')->name('slider.store');
         Route::delete('slider/{id}', 'App\Http\Controllers\SliderController@destroy')->name('slider.destroy');
 
-        Route::get('users','UserController@index')->name('user.index');
+        Route::get('users', 'App\Http\Controllers\UserController@index')->name('user.index');
 
         //orders
-        Route::get('/orders','CartController@userOrder')->name('order.index');
-        Route::get('/orders/{userid}/{orderid}','CartController@viewUserOrder')->name('user.order');
+        Route::get('/orders', 'App\Http\Controllers\CartController@userOrder')->name('order.index');
+        Route::get('/orders/{userid}/{orderid}', 'App\Http\Controllers\CartController@viewUserOrder')->name('user.order');
 
     }
 );
