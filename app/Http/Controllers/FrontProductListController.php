@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Slider;
+use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Subcategory;
-use Illuminate\Http\Request;
+use App\Models\Slider;
 
 class FrontProductListController extends Controller
 {
@@ -41,6 +41,8 @@ class FrontProductListController extends Controller
 
         $category  = Category::where('slug', $name)->first();
         $categoryId = $category->id;
+        $filterSubCategories = [];
+        $price = [];
 
         if ($request->subcategory) {
             $products = $this->filterProducts($request);
@@ -53,8 +55,7 @@ class FrontProductListController extends Controller
         $subcategories = Subcategory::where('category_id', $category->id)->get();
         $slug = $name;
 
-        // return view('category', compact('products', 'subcategories', 'slug', 'filterSubCategories', 'price', 'categoryId'));
-        return view('category', compact('products', 'subcategories', 'slug', 'categoryId'));
+        return view('category', compact('products', 'subcategories', 'slug', 'filterSubCategories', 'price', 'categoryId'));
     }
 
     public function filterProducts(Request $request)

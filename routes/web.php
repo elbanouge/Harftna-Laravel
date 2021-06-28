@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/test', function () {
+    return view('test');
+});
 
 Route::get('/', 'App\Http\Controllers\FrontProductListController@index');
 Route::get('/product/{id}', 'App\Http\Controllers\FrontProductListController@show')->name('product.view');
