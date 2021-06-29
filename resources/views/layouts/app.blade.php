@@ -304,7 +304,7 @@
                                     <div class="navbar-collapse">
                                         <div class="nav-inner">
                                             <ul class="nav main-menu menu navbar-nav">
-                                                <li class="active"><a href="{{ url('/') }}">Home</a></li>
+                                                <li class="active"><a href="{{ url('/') }}">Accuiel</a></li>
                                                 <li><a href="{{ route('more.product') }}">Produits</a></li>
                                                 <li><a href="{{ url('/contact') }}">Contactez-nous</a></li>
                                             </ul>
