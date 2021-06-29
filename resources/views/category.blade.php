@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="container">
-        <h2>Products</h2>
+        <h2>Produit</h2>
 
         <div class="row">
             <div class="col-md-2">
@@ -16,7 +16,7 @@
                     <input type="submit" value="Filter" class="btn btn-secondary">
                 </form>
                 <hr>
-                <h3>Filter by price</h3>
+                <h3>Filtrer par prix</h3>
 
                 <form action="{{ route('product.list', [$slug]) }}" method="GET">
                     <input type="text" name="min" class="form-control" placeholder="minimum price" required="">
@@ -30,7 +30,7 @@
 
                 </form>
                 <hr>
-                <a href="{{ route('product.list', [$slug]) }}">Back</a>
+                <a href="{{ route('product.list', [$slug]) }}">Précédent</a>
 
 
 
@@ -52,7 +52,7 @@
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
                                             <a href="{{ route('product.view', [$product->id]) }}"> <button type="button"
-                                                    class="btn btn-sm btn-outline-success">View</button>
+                                                    class="btn btn-sm btn-outline-success">Voir</button>
                                             </a>
                                             <a href="{{ route('add.cart', [$product->id]) }}"> <button type="button"
                                                     class="btn btn-sm btn-outline-primary">Add to cart</button>

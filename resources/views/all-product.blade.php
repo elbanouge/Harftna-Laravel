@@ -6,10 +6,10 @@
  	<form action="{{route('more.product')}}" method="GET">
  		<div class="form-row">
  			<div class="col-md-8">
- 				<input type="text" name="search" class="form-control" placeholder="search...">
+ 				<input type="text" name="search" class="form-control" placeholder="Rechercher...">
  			</div>
  			<div class="col">
- 				<button type="submit" class="btn btn-secondary">Search</button>
+ 				<button type="submit" class="btn btn-secondary">recherche</button>
  			</div>
  		</div>
 
@@ -30,9 +30,9 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                 <a href="{{route('product.view',[$product->id])}}"> <button type="button" class="btn btn-sm btn-outline-success">View</button>
+                 <a href="{{route('product.view',[$product->id])}}"> <button type="button" class="btn btn-sm btn-outline-success">Voir</button>
                  </a>
-                 <a href="{{route('add.cart',[$product->id])}}"> <button type="button" class="btn btn-sm btn-outline-primary">Add to cart</button></a>
+                 <a href="{{route('add.cart',[$product->id])}}"> <button type="button" class="btn btn-sm btn-outline-primary">Ajouter au panier !</button></a>
                 </div>
                 <small class="text-muted">${{$product->price}}</small>
               </div>

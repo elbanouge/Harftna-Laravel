@@ -4,11 +4,11 @@
 
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Category Tables</h1>
+            <h1 class="h3 mb-0 text-gray-800">Table Catégorie</h1>
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="./">Home</a></li>
-              <li class="breadcrumb-item">Category</li>
-              <li class="breadcrumb-item active" aria-current="page">category Tables</li>
+              <li class="breadcrumb-item"><a href="./">Accueil</a></li>
+              <li class="breadcrumb-item">Catégorie</li>
+              <li class="breadcrumb-item active" aria-current="page">Table Catégorie</li>
             </ol>
           </div>
 
@@ -17,15 +17,15 @@
               <!-- Simple Tables -->
               <div class="card">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">All Categories</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Tous les catégories</h6>
                 </div>
                 <div class="table-responsive">
                   <table class="table align-items-center table-flush">
                     <thead class="thead-light">
                       <tr>
-                        <th>SN</th>
+                        <th>ID</th>
                         <th>Image</th>
-                        <th>Name</th>
+                        <th>Nom</th>
                         <th>Description</th>
                         <th>Action</th>
                         <th></th>
@@ -41,14 +41,14 @@
                         <td>{{$category->name}}</td>
                         <td>{{$category->description}}</td>
                         
-                        <td><a href="{{route('category.edit',[$category->id])}}" class="btn btn-sm btn-primary">Edit</a>
+                        <td><a href="{{route('category.edit',[$category->id])}}" class="btn btn-sm btn-primary">Modifier</a>
 
                          
                         </td>
                         <td>
                           <form action="{{route('category.destroy',[$category->id])}}" method="POST" onsubmit="return confirmDelete()">@csrf
                             {{method_field('DELETE')}}
-                            <button type="submit" class="btn btn-sm btn-danger" >Delete</button>
+                            <button type="submit" class="btn btn-sm btn-danger" >Supprimer</button>
                             
                           </form>
                         </td>
@@ -56,7 +56,7 @@
                       @endforeach
 
                       @else
-                      <td>No category created yet!</td>
+                      <td>Vide !</td>
                       @endif
                       
                       

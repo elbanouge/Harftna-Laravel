@@ -15,10 +15,10 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Image</th>
-                    <th scope="col">Product</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Qty</th>
-                    <th scope="col">Remove</th>
+                    <th scope="col">Produit</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Qte</th>
+                    <th scope="col">Retirer</th>
 
                 </tr>
             </thead>
@@ -38,14 +38,14 @@
                                 <form action="{{ route('cart.update', $product['id']) }}" method="post">@csrf
                                     <input type="text" name="qty" value="{{ $product['qty'] }}">
                                     <button class="btn btn-secondary btn-sm">
-                                        <i class="fas fa-sync"></i>Update
+                                        <i class="fas fa-sync"></i>Mettre à jour
                                     </button>
                                 </form>
                             </td>
                             <td>
                                 <form action="{{ route('cart.remove', $product['id']) }}" method="post">@csrf
 
-                                    <button class="btn btn-danger">Remove</button>
+                                    <button class="btn btn-danger">Retirer</button>
                                 </form>
                             </td>
                         </tr>
@@ -57,19 +57,19 @@
         </table>
         <hr>
         <div class="card-footer">
-            <a href="{{ url('/') }}"><button class="btn btn-primary">Continue shopping</button></a>
+            <a href="{{ url('/') }}"><button class="btn btn-primary">Continuer d'acheter</button></a>
 
             <form action="{{ route('cart.clean') }}" method="post">@csrf
-                <button class="btn btn-secondary">Clean cart</button>
+                <button class="btn btn-secondary">Retirer tout du panier</button>
             </form>
 
-            <span style="margin-left: 300px;">Total Price:${{ $cart->totalPrice }}</span>
+            <span style="margin-left: 300px;">Prix total:${{ $cart->totalPrice }}</span>
 
             <a href="{{ route('cart.checkout', $cart->totalPrice) }}"><button
-                    class="btn btn-info float-right">Checkout</button></a>
+                    class="btn btn-info float-right">Caisse</button></a>
         </div>
     @else
-        <td>No items in cart</td>
+        <td>Aucun produit dans le panier</td>
         @endif
 
     </div>

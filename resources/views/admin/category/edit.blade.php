@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 ml-4 text-gray-800">Category</h1>
+        <h1 class="h3 mb-0 ml-4 text-gray-800">Catégorie</h1>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="./">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Category</li>
+            <li class="breadcrumb-item"><a href="./">Accueil</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Catégorie</li>
         </ol>
     </div>
 
@@ -22,13 +22,13 @@
                 {{ method_field('PUT') }}
                 <div class="card mb-6">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Update Category</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Mise à jour catégorie</h6>
                     </div>
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="">Name</label>
+                            <label for="">Nom</label>
                             <input type="text" name="name" class="form-control @error('name') is-invalid @enderror " id=""
-                                aria-describedby="" placeholder="Enter name of category" value="{{ $category->name }}">
+                                aria-describedby="" placeholder="Entrez le nom de la catégorie" value="{{ $category->name }}">
                             @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -52,7 +52,7 @@
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input " id="customFile" name="image">
                                 <label class="custom-file-label @error('description') is-invalid @enderror "
-                                    for="customFile">Choose file</label>
+                                    for="customFile">Choisir un fichier</label>
                                 <img class="img-fluid" src="{{ Storage::url($category->image) }}" width="100" height="100" alt="">
                                 @error('image')
                                     <span class="invalid-feedback" role="alert">
@@ -67,7 +67,7 @@
                         <br>
                         <br>
 
-                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="submit" class="btn btn-primary">Mise a jour</button>
 
                     </div>
                 </div>
