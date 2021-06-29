@@ -476,8 +476,8 @@
                         <!-- Start Single Service -->
                         <div class="single-service">
                             <i class="ti-rocket"></i>
-                            <h4>Free shiping</h4>
-                            <p>Orders over $100</p>
+                            <h4>Livraison Gratuite</h4>
+                            <p>Commander plus que 1000 Dhs</p>
                         </div>
                         <!-- End Single Service -->
                     </div>
@@ -485,8 +485,8 @@
                         <!-- Start Single Service -->
                         <div class="single-service">
                             <i class="ti-reload"></i>
-                            <h4>Free Return</h4>
-                            <p>Within 30 days returns</p>
+                            <h4>Retour gratuit</h4>
+                            <p>Dans 30 Jours</p>
                         </div>
                         <!-- End Single Service -->
                     </div>
@@ -494,8 +494,8 @@
                         <!-- Start Single Service -->
                         <div class="single-service">
                             <i class="ti-lock"></i>
-                            <h4>Sucure Payment</h4>
-                            <p>100% secure payment</p>
+                            <h4>Paiement sécurisé</h4>
+                            <p>100% Paiement sécurisé</p>
                         </div>
                         <!-- End Single Service -->
                     </div>
@@ -503,8 +503,8 @@
                         <!-- Start Single Service -->
                         <div class="single-service">
                             <i class="ti-tag"></i>
-                            <h4>Best Peice</h4>
-                            <p>Guaranteed price</p>
+                            <h4>Meilleur prix</h4>
+                            <p>Produit garanti</p>
                         </div>
                         <!-- End Single Service -->
                     </div>
@@ -521,11 +521,11 @@
                         <div class="col-lg-8 offset-lg-2 col-12">
                             <!-- Start Newsletter Inner -->
                             <div class="inner">
-                                <h4>Newsletter</h4>
-                                <p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
+                                <h4>newsletter</h4>
+                                <p>Abonnez-vous à notre newsletter et obtenez<span> 10% </span>sur votre premier achat</p>
                                 <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-                                    <input name="EMAIL" placeholder="Your email address" required="" type="email">
-                                    <button class="btn">Subscribe</button>
+                                    <input name="EMAIL" placeholder="Votre adresse E-Mail" required="" type="email">
+                                    <button class="btn">s'abonner</button>
                                 </form>
                             </div>
                             <!-- End Newsletter Inner -->
@@ -544,25 +544,6 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close"
                                 aria-hidden="true"></span></button>
                     </div>
-                    <div class="modal-body">
-                        <div class="row no-gutters">
-                            <div class="col-lg-6 offset-lg-3 col-12">
-                                <h4
-                                    style="margin-top:100px;font-size:14px; font-weight:500; color:#F7941D; display:block; margin-bottom:5px;">
-                                    Eshop Free Lite</h4>
-                                <h3 style="font-size:30px;color:#333;">Currently You are using free lite Version of Eshop.
-                                    <h3>
-                                        <p
-                                            style="display:block; margin-top:20px; color:#888; font-size:14px; font-weight:400;">
-                                            Please, purchase full version of the template to get all pages, features and
-                                            commercial license</p>
-                                        <div class="button" style="margin-top:30px;">
-                                            <a href="https://wpthemesgrid.com/downloads/eshop-ecommerce-html5-template/"
-                                                target="_blank" class="btn" style="color:#fff;">Buy Now!</a>
-                                        </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -580,10 +561,8 @@
                                 <div class="logo">
                                     <a href="index.html"><img src="{{ asset('/style/images/logo2.png') }}" alt="#"></a>
                                 </div>
-                                <p class="text">Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, magna
-                                    eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
-                                    facilisis luctus, metus.</p>
-                                <p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">+0123 456
+                                <p class="text">De nos jours, de nombreux artisans et associations d'industries traditionnelles souffrent des problèmes de commercialisation de leurs produits, ce qui est la raison de leur faillite, et de nombreux clients sont exposés à des fraudes et des fraudes en raison de leur ignorance de la source et du prix réel du produit. Par conséquent, ce site a été créé pour faciliter la relation vente-achat entre le client et le vendeur avec une assurance qualité L'authenticité de la source et la présentation du produit au plus grand nombre.</p>
+                                <p class="call">Vous avez une question? Appelez-nous 24/7<span><a href="tel:123456789">+0123 456
                                             789</a></span></p>
                             </div>
                             <!-- End Single Widget -->
@@ -593,11 +572,11 @@
                             <div class="single-footer links">
                                 <h4>Information</h4>
                                 <ul>
-                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">a propos de nous</a></li>
                                     <li><a href="#">Faq</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Help</a></li>
+                                    <li><a href="#">Termes et conditions</a></li>
+                                    <li><a href="#">Contactez-nous</a></li>
+                                    <li><a href="#">Aide</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
@@ -605,13 +584,13 @@
                         <div class="col-lg-2 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer links">
-                                <h4>Customer Service</h4>
+                                <h4>service client</h4>
                                 <ul>
-                                    <li><a href="#">Payment Methods</a></li>
-                                    <li><a href="#">Money-back</a></li>
-                                    <li><a href="#">Returns</a></li>
-                                    <li><a href="#">Shipping</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Modes de paiement</a></li>
+                                    <li><a href="#">Remboursement</a></li>
+                                    <li><a href="#">Retourne</a></li>
+                                    <li><a href="#">livraison</a></li>
+                                    <li><a href="#">politique de confidentialité</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
@@ -619,14 +598,14 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer social">
-                                <h4>Get In Tuch</h4>
+                                <h4>Contactez-nous</h4>
                                 <!-- Single Widget -->
                                 <div class="contact">
                                     <ul>
-                                        <li>NO. 342 - London Oxford Street.</li>
-                                        <li>012 United Kingdom.</li>
-                                        <li>info@eshop.com</li>
-                                        <li>+032 3456 7890</li>
+                                        <li>ISTA MIRLEFT</li>
+                                        <li>Morocco</li>
+                                        <li>PFF@PFF.PFF</li>
+                                        <li>+012 3456 7890</li>
                                     </ul>
                                 </div>
                                 <!-- End Single Widget -->
@@ -649,15 +628,11 @@
                         <div class="row">
                             <div class="col-lg-6 col-12">
                                 <div class="left">
-                                    <p>Copyright © 2020 <a href="http://www.wpthemesgrid.com"
-                                            target="_blank">Wpthemesgrid</a> - All Rights Reserved.</p>
+                                    <p>Copyright © 2021 <a href="#"
+                                            target="_blank">Harftna</a> - Tous les droits sont réservés.</p>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-12">
-                                <div class="right">
-                                    <img src="images/payments.png" alt="#">
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
