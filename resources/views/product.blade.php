@@ -603,7 +603,7 @@
                                 <div class="contact">
                                     <ul>
                                         <li>ISTA MIRLEFT</li>
-                                        <li>Morocco</li>
+                                        <li>Maroc</li>
                                         <li>PFF@PFF.PFF</li>
                                         <li>+012 3456 7890</li>
                                     </ul>

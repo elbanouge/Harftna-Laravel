@@ -11,7 +11,7 @@
                     <div class="col-12">
                         <div class="bread-inner">
                             <ul class="bread-list">
-                                <li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
+                                <li><a href="index1.html">Accueil<i class="ti-arrow-right"></i></a></li>
                                 <li class="active"><a href="blog-single.html">Contact</a></li>
                             </ul>
                         </div>
@@ -29,44 +29,44 @@
                         <div class="col-lg-8 col-12">
                             <div class="form-main">
                                 <div class="title">
-                                    <h4>Get in touch</h4>
-                                    <h3>Write us a message</h3>
+                                    <h4>Contactez-nous</h4>
+                                    <h3>Écrivez-nous un message</h3>
                                 </div>
                                 <form class="form" method="post" action="mail/mail.php">
                                     <div class="row">
                                         <div class="col-lg-6 col-12">
                                             <div class="form-group">
-                                                <label>Your Name<span>*</span></label>
+                                                <label>Nom<span>*</span></label>
                                                 <input name="name" type="text" placeholder="">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-12">
                                             <div class="form-group">
-                                                <label>Your Subjects<span>*</span></label>
+                                                <label>Objet<span>*</span></label>
                                                 <input name="subject" type="text" placeholder="">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-12">
                                             <div class="form-group">
-                                                <label>Your Email<span>*</span></label>
+                                                <label>Votre Email<span>*</span></label>
                                                 <input name="email" type="email" placeholder="">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-12">
                                             <div class="form-group">
-                                                <label>Your Phone<span>*</span></label>
+                                                <label>Votre Téléphone<span>*</span></label>
                                                 <input name="company_name" type="text" placeholder="">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group message">
-                                                <label>your message<span>*</span></label>
+                                                <label>Votre message<span>*</span></label>
                                                 <textarea name="message" placeholder=""></textarea>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group button">
-                                                <button type="submit" class="btn ">Send Message</button>
+                                                <button type="submit" class="btn ">Envoyer</button>
                                             </div>
                                         </div>
                                     </div>
@@ -77,25 +77,23 @@
                             <div class="single-head">
                                 <div class="single-info">
                                     <i class="fa fa-phone"></i>
-                                    <h4 class="title">Call us Now:</h4>
+                                    <h4 class="title">Appelez-nous :</h4>
                                     <ul>
-                                        <li>+123 456-789-1120</li>
-                                        <li>+522 672-452-1120</li>
+                                        <li>+123 456-789-012</li>
                                     </ul>
                                 </div>
                                 <div class="single-info">
                                     <i class="fa fa-envelope-open"></i>
-                                    <h4 class="title">Email:</h4>
+                                    <h4 class="title">E-mail:</h4>
                                     <ul>
-                                        <li><a href="mailto:info@yourwebsite.com">info@yourwebsite.com</a></li>
-                                        <li><a href="mailto:info@yourwebsite.com">support@yourwebsite.com</a></li>
+                                        <li><a href="mailto:info@yourwebsite.com">PFF@PFF.PFF</a></li>
                                     </ul>
                                 </div>
                                 <div class="single-info">
                                     <i class="fa fa-location-arrow"></i>
-                                    <h4 class="title">Our Address:</h4>
+                                    <h4 class="title">Notre Addresse:</h4>
                                     <ul>
-                                        <li>KA-62/1, Travel Agency, 45 Grand Central Terminal, New York.</li>
+                                        <li>ISTA MIRLEFT - Maroc</li>
                                     </ul>
                                 </div>
                             </div>
