@@ -18,6 +18,10 @@ Route::get('/test', function () {
     return view('test');
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
 Route::get('/', 'App\Http\Controllers\FrontProductListController@index');
 Route::get('/product/{id}', 'App\Http\Controllers\FrontProductListController@show')->name('product.view');
 Route::get('subcatories/{id}', 'App\Http\Controllers\ProductController@loadSubCategories');

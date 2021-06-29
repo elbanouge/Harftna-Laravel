@@ -13,6 +13,7 @@ class SliderController extends Controller
         $sliders = Slider::get();
         return view('admin.slider.index', compact('sliders'));
     }
+    
     public function create()
     {
         return view('admin.slider.create');
@@ -21,12 +22,15 @@ class SliderController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'image' => 'required|mimes:jpeg,png'
+            'image' => 'required|mimes:jpeg,png',
+            'name' => 'required',
+            'url' => 'required'
         ]);
         $image = $request->file('image')->store('public/slider');
         Slider::create([
-
-            'image' => $image
+            'image' => $image,
+            'name' => $request->name,
+            'url' => $request->url
         ]);
         notify()->success('Image uploaded successfully!');
         return redirect()->back();
