@@ -14,9 +14,9 @@
  						<img src="{{Storage::url($item['image'])}}" width="100">
  					</span>
 
- 					<p>Name:{{$item['name']}}</p>
- 					<p>Price:{{$item['price']}}</p>
- 					<p>Qty:{{$item['qty']}}</p>
+ 					<p>Nom:{{$item['name']}}</p>
+ 					<p>Prix:{{$item['price']}}</p>
+ 					<p>Quantité:{{$item['qty']}}</p>
 
  					@endforeach
  					
@@ -26,7 +26,7 @@
  			<p>
  				<button type="button" class="btm btn-info" style="color: #fff;">
  					<span class="">
- 						Total price:${{$cart->totalPrice}}
+ 						Total prix: {{$cart->totalPrice}} Dhs
  					</span>
  				</button>
  			</p>

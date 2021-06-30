@@ -37,7 +37,7 @@
  			<p>
  				<button type="button" class="btm btn-success">
  					<span class="">
- 						Total price:${{$cart->totalPrice}}
+ 						Total price:{{$cart->totalPrice}} Dhs
  					</span>
  				</button>
  			</p>

@@ -84,7 +84,7 @@ class SubcategoryController extends Controller
         $subcategory->name = $request->name;
         $subcategory->category_id = $request->category;
         $subcategory->save();
-        notify()->success('Subcategory updated successfully!');
+        notify()->success(' Sous catégorie bien ajouté. ');
         return redirect()->route('subcategory.index');
     }
 
@@ -98,7 +98,7 @@ class SubcategoryController extends Controller
     {
         $subcategory = Subcategory::find($id);
         $subcategory->delete();
-        notify()->success('Subcategory deleted successfully!');
+        notify()->success(' Sous catégorie bien supprimée. ');
         return redirect()->route('subcategory.index');
     }
 }

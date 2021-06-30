@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="{{ asset('admin/img/logo/logo.png') }}" rel="icon">
-    <title>RuangAdmin - Dashboard</title>
+    <title>Admin - tableau de bord</title>
     <link href="{{ asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/css/ruang-admin.css') }}" rel="stylesheet">
@@ -19,6 +19,5 @@
         .inset-0 {
             top: auto !important;
         }
-
     </style>
 </head>

@@ -52,7 +52,7 @@ class CategoryController extends Controller
             'description' => $request->description,
             'image' => $image
         ]);
-        notify()->success('Category created successfully!');
+        notify()->success('Categorie bien crée.');
         return redirect()->route('category.index');
     }
 
@@ -98,7 +98,7 @@ class CategoryController extends Controller
         $category->description = $request->description;
         $category->image = $image;
         $category->save();
-        notify()->success('Category updated successfully!');
+        notify()->success(' Categorie bien modifié. ');
         return redirect()->route('category.index');
     }
 
@@ -114,7 +114,7 @@ class CategoryController extends Controller
         $filename = $category->image;
         $category->delete();
         Storage::delete($filename);
-        notify()->success('Category deleted successfully!');
+        notify()->success('Categorie bien supprimé.');
         return redirect()->route('category.index');
     }
 }

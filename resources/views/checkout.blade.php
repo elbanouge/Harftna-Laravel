@@ -41,9 +41,9 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Image</th>
-                            <th scope="col">Product</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Qty</th>
+                            <th scope="col">Produit</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Quantité</th>
 
                         </tr>
                     </thead>
@@ -74,7 +74,7 @@
                     </tbody>
                 </table>
                 <hr>
-                Total Price:${{ $cart->totalPrice }}
+                Total Prix:{{ $cart->totalPrice }} Dhs
             </div>
 
             <div class="col-md-6">
@@ -84,24 +84,24 @@
 
                         <form action="/charge" method="post" id="payment-form">@csrf
                             <div class="form-group">
-                                <label>Name</label>
+                                <label>Nom</label>
                                 <input type="text" name="name" id="name" class="form-control" required=""
                                     value="{{ auth()->user()->name }}" readonly="">
                             </div>
 
                             <div class="form-group">
 
-                                <label>Adress</label>
+                                <label>Adresse</label>
                                 <input type="text" name="address" id="address" class="form-control" required="">
                             </div>
                             <div class="form-group">
 
-                                <label>City</label>
+                                <label>Ville</label>
                                 <input type="text" name="city" id="city" class="form-control" required="">
                             </div>
                             <div class="form-group">
 
-                                <label>State</label>
+                                <label>Region</label>
                                 <input type="text" name="state" id="state" class="form-control" required="">
                             </div>
                             <div class="form-group">
@@ -115,7 +115,7 @@
 
                                 <div class="">
                                     <label for="card-element">
-                                        Credit or debit card
+                                        Carte bancaire
                                     </label>
                                     <div id="card-element">
                                         <!-- A Stripe Element will be inserted here. -->
@@ -125,7 +125,7 @@
                                     <div id="card-errors" role="alert"></div>
                                 </div>
 
-                                <button class="btn btn-primary mt-4" type="submit">Submit Payment</button>
+                                <button class="btn btn-primary mt-4" type="submit">Valider Paiement</button>
 
                         </form>
                     </div>

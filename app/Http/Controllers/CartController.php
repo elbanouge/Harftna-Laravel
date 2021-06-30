@@ -25,7 +25,7 @@ class CartController extends Controller
 
 
         session()->put('cart', $cart);
-        notify()->success('Product added to cart!');
+        notify()->success('Produit ajoute au panier.');
         return redirect()->back();
     }
 
@@ -50,7 +50,7 @@ class CartController extends Controller
         $cart  = new Cart(session()->get('cart'));
         $cart->updateQty($product->id, $request->qty);
         session()->put('cart', $cart);
-        notify()->success(' Cart updated!');
+        notify()->success(' Panier modifié ');
         return redirect()->back();
     }
 
@@ -70,7 +70,7 @@ class CartController extends Controller
         } else {
             session()->put('cart', $cart);
         }
-        notify()->success(' Cart updated!');
+        notify()->success(' Panier supprimé ');
         return redirect()->back();
     }
 
@@ -110,7 +110,7 @@ class CartController extends Controller
             ]);
 
             session()->forget('cart');
-            notify()->success(' Transaction completed!');
+            notify()->success(' Transaction complete ');
             return redirect()->to('/');
         } else {
             return redirect()->back();

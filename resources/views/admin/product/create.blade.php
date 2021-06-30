@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 ml-4 text-gray-800">Product</h1>
+        <h1 class="h3 mb-0 ml-4 text-gray-800">Produit</h1>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="./">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Product</li>
+            <li class="breadcrumb-item"><a href="./">Accueil</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Prduits</li>
         </ol>
     </div>
 
@@ -21,13 +21,13 @@
             <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">@csrf
                 <div class="card mb-6">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Create Product</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Ajouter Produit</h6>
                     </div>
                     <div class="card-body">
                         <div class="form-group">
                             <label for="">Name</label>
                             <input type="text" name="name" class="form-control @error('name') is-invalid @enderror " id=""
-                                aria-describedby="" placeholder="Enter name of product">
+                                aria-describedby="" placeholder="Saisie le nom du prduit">
                             @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -50,7 +50,7 @@
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input @error('image') is-invalid @enderror  "
                                     id="customFile" name="image">
-                                <label class="custom-file-label  " for="customFile">Choose file</label>
+                                <label class="custom-file-label  " for="customFile">Choisir un fichier</label>
                                 @error('image')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -72,7 +72,7 @@
 
                         </div>
                         <div class="form-group">
-                            <label for="">Additional information</label>
+                            <label for="">Plus d'informations</label>
                             <textarea name="additional_info" id="summernote1"
                                 class="form-control @error('additional_info') is-invalid @enderror "></textarea>
                             @error('additional_info')
@@ -83,7 +83,7 @@
 
                         </div>
                         <div class="form-group">
-                            <label for="">Choose Category</label>
+                            <label for="">Choisir une categorie</label>
                             <select name="category" class="form-control @error('category') is-invalid @enderror">
                                 <option value="">select</option>
                                 @foreach (App\Models\Category::all() as $key => $category)
@@ -102,20 +102,20 @@
 
 
                         <div class="form-group">
-                            <label for="">Choose Subcategory</label>
+                            <label for="">Choix du Sous-Categorie</label>
                             <select name="subcategory" class="form-control @error('subcategory') is-invalid @enderror">
-                                <option value="">select</option>
+                                <option value="">Selection</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Valider</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 
-    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> --}}
+    {{-- <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
         $("document").ready(function() {
             $('select[name="category"]').on('change', function() {

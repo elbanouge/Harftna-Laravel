@@ -1,4 +1,4 @@
-            <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+ <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top" style=" background-color: #f7941d8c !important;">
                 <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
                     <i class="fa fa-bars"></i>
                 </button>
@@ -24,7 +24,7 @@
                             </form>
                         </div>
                     </li>
-                    <li class="nav-item dropdown no-arrow mx-1">
+                    {{-- <li class="nav-item dropdown no-arrow mx-1">
                         <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-bell fa-fw"></i>
@@ -33,7 +33,7 @@
                         <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                             aria-labelledby="alertsDropdown">
                             <h6 class="dropdown-header">
-                                Alerts Center
+                            Centre d’alertes
                             </h6>
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="mr-3">
@@ -42,8 +42,8 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="small text-gray-500">December 12, 2019</div>
-                                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    <div class="small text-gray-500"></div>
+                                    <span class="font-weight-bold">Un nouveau rapport mensuel est prêt à être téléchargé!</span>
                                 </div>
                             </a>
                             <a class="dropdown-item d-flex align-items-center" href="#">
@@ -53,7 +53,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="small text-gray-500">December 7, 2019</div>
+                                    <div class="small text-gray-500"></div>
                                     $290.29 has been deposited into your account!
                                 </div>
                             </a>
@@ -157,7 +157,7 @@
                             </a>
                             <a class="dropdown-item text-center small text-gray-500" href="#">View All Taks</a>
                         </div>
-                    </li>
+                    </li> --}}
                     <div class="topbar-divider d-none d-sm-block"></div>
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -166,7 +166,7 @@
                                 style="max-width: 60px">
                             <span class="ml-2 d-none d-lg-inline text-white small">{{ Auth()->user()->name }}</span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                        {{-- <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                             aria-labelledby="userDropdown">
                             <a class="dropdown-item" href="#">
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -186,7 +186,7 @@
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Logout
                             </a>
-                        </div>
+                        </div> --}}
                     </li>
                 </ul>
             </nav>

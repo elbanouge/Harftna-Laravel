@@ -1,32 +1,32 @@
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/auth/dashboard') }}">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" style=" background-color: #e0c8ab !important;" href="{{ url('/auth/dashboard') }}">
             <div class="sidebar-brand-icon">
                 <img src="{{ asset('admin/img/logo/logo2.png') }}">
             </div>
-            <div class="sidebar-brand-text mx-3">RuangAdmin</div>
+            <div class="sidebar-brand-text mx-3">Admin</div>
         </a>
         <hr class="sidebar-divider my-0">
         <li class="nav-item active">
             <a class="nav-link" href="{{ url('/auth/dashboard') }}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
+                <span>tableau de bord</span></a>
         </li>
         <hr class="sidebar-divider">
         <div class="sidebar-heading">
-            Features
+        fonctionnalités
         </div>
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
                 aria-expanded="true" aria-controls="collapseBootstrap">
                 <i class="far fa-fw fa-window-maximize"></i>
-                <span>Category</span>
+                <span>Catégorie</span>
             </a>
             <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Category </h6>
-                    <a class="collapse-item" href="{{ route('category.index') }}">View</a>
-                    <a class="collapse-item" href="{{ route('category.create') }}">Create</a>
+                    <h6 class="collapse-header">Catégorie </h6>
+                    <a class="collapse-item" href="{{ route('category.index') }}">Vue</a>
+                    <a class="collapse-item" href="{{ route('category.create') }}">Créer</a>
 
                 </div>
             </div>
@@ -41,9 +41,9 @@
             <div id="collapseBootstrap1" class="collapse" aria-labelledby="headingBootstrap"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">SubCategory </h6>
-                    <a class="collapse-item" href="{{ route('subcategory.index') }}">View</a>
-                    <a class="collapse-item" href="{{ route('subcategory.create') }}">Create</a>
+                    <h6 class="collapse-header">Sous-catégorie </h6>
+                    <a class="collapse-item" href="{{ route('subcategory.index') }}">Vue</a>
+                    <a class="collapse-item" href="{{ route('subcategory.create') }}">Créer</a>
 
                 </div>
             </div>
@@ -53,14 +53,14 @@
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap2"
                 aria-expanded="true" aria-controls="collapseBootstrap2">
                 <i class="far fa-fw fa-window-maximize"></i>
-                <span>Products</span>
+                <span>Produits</span>
             </a>
             <div id="collapseBootstrap2" class="collapse" aria-labelledby="headingBootstrap"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Products </h6>
-                    <a class="collapse-item" href="{{ route('product.index') }}">View</a>
-                    <a class="collapse-item" href="{{ route('product.create') }}">Create</a>
+                    <h6 class="collapse-header">Produits </h6>
+                    <a class="collapse-item" href="{{ route('product.index') }}">Vue</a>
+                    <a class="collapse-item" href="{{ route('product.create') }}">Créer</a>
 
                 </div>
             </div>
@@ -69,14 +69,14 @@
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap3"
                 aria-expanded="true" aria-controls="collapseBootstrap3">
                 <i class="far fa-fw fa-window-maximize"></i>
-                <span>Slider</span>
+                <span>Glisseur</span>
             </a>
             <div id="collapseBootstrap3" class="collapse" aria-labelledby="headingBootstrap"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Slider </h6>
-                    <a class="collapse-item" href="{{ route('slider.index') }}">View</a>
-                    <a class="collapse-item" href="{{ route('slider.create') }}">Create</a>
+                    <h6 class="collapse-header">Glisseur </h6>
+                    <a class="collapse-item" href="{{ route('slider.index') }}">Vue</a>
+                    <a class="collapse-item" href="{{ route('slider.create') }}">Créer</a>
 
                 </div>
             </div>
@@ -91,8 +91,8 @@
             <div id="collapseBootstrap4" class="collapse" aria-labelledby="headingBootstrap"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Users </h6>
-                    <a class="collapse-item" href="{{ route('user.index') }}">View all users</a>
+                    <h6 class="collapse-header">Utilisateurs </h6>
+                    <a class="collapse-item" href="{{ route('user.index') }}">Afficher tous les utilisateurs</a>
 
 
                 </div>
@@ -102,13 +102,13 @@
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap5"
                 aria-expanded="true" aria-controls="collapseBootstrap5">
                 <i class="far fa-fw fa-window-maximize"></i>
-                <span>User Order</span>
+                <span>Commande utilisateur</span>
             </a>
             <div id="collapseBootstrap5" class="collapse" aria-labelledby="headingBootstrap"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Order </h6>
-                    <a class="collapse-item" href="{{ route('order.index') }}">View</a>
+                    <h6 class="collapse-header">commande </h6>
+                    <a class="collapse-item" href="{{ route('order.index') }}">vue</a>
 
 
                 </div>
@@ -149,7 +149,7 @@
             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                 <i class="fas fa-sign-out-alt"></i>
-                Logout
+                Déconnexion
 
             </a>
 
