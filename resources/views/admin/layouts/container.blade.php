@@ -191,7 +191,7 @@
                    </div>
                </div>
            </div>
-           <!-- Invoice Example -->
+           {{-- <!-- Invoice Example -->
            <div class="col-xl-8 col-lg-7 mb-4">
                <div class="card">
                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -298,16 +298,10 @@
                        </div>
                    </div>
                </div>
-           </div>
+           </div> --}}
        </div>
        <!--Row-->
 
-       <div class="row">
-           <div class="col-lg-12 text-center">
-               <p>Do you like this template ? you can download from <a href="https://github.com/indrijunanda/RuangAdmin"
-                       class="btn btn-primary btn-sm" target="_blank"><i
-                           class="fab fa-fw fa-github"></i>&nbsp;GitHub</a></p>
-           </div>
-       </div>
+
 
    </div>

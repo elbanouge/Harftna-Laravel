@@ -51,18 +51,12 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    {{-- @notifyCss
+    @notifyCss
     <style>
         .inset-0 {
             top: auto !important;
         }
-
-        img,
-        video {
-            height: 200px;
-        }
-
-    </style> --}}
+    </style>
 
     <!-- Styles -->
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
@@ -128,9 +122,6 @@
                                 </li>
                             @endif
                         @else
-
-
-
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -201,14 +192,14 @@
                                     <li class="nav-item dropdown">
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                            <i class="fa fa-user-circle-o"></i>
+                                            <i class="ti-user"></i>
                                             {{ Auth::user()->name }} <span class="caret"></span>
                                         </a>
 
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
+                                                                        document.getElementById('logout-form').submit();">
+                                                {{ __('Déconnecter') }}
                                             </a>
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                                 style="display: none;">
@@ -270,11 +261,18 @@
                         <div class="right-bar">
                             <!-- Search Form -->
                             <div class="sinlge-bar">
+
+                                @if (Auth::check())
+                                    <a href="{{ route('order') }}" class="single-icon"><i class="fa fa-user-circle-o"
+                                            aria-hidden="true"></i></i></a>
+                                @endif
+                            </div>
+                            <div class="sinlge-bar">
                                 <a href="#" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                             </div>
                             <div class="sinlge-bar shopping">
-                                <a href="#" class="single-icon"><i class="ti-bag"></i> <span
-                                        class="total-count">2</span></a>
+                                <a href="{{ route('cart.show') }}" class="single-icon"><i class="ti-bag"></i> <span
+                                        class="total-count">{{ session()->has('cart') ? session()->get('cart')->totalQty : '0' }}</span></a>
                             </div>
                         </div>
                     </div>
@@ -287,12 +285,14 @@
                 <div class="cat-nav-head">
                     <div class="row">
                         <div class="col-lg-3">
-                            <div class="all-category">
+                            <div class="all-category" id="category-home">
                                 <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES</h3>
-                                <ul class="main-category">
+                                <ul class="main-category" id="category-subhome" style="display: none;">
                                     <!--foreach categories-->
                                     @foreach (App\Models\Category::all() as $cat)
-                                        <li><a href="#">{{ $cat->name }}</a></li>
+                                        <li><a
+                                                href="{{ route('product.list', [$cat->slug]) }}">{{ $cat->name }}</a>
+                                        </li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -304,7 +304,7 @@
                                     <div class="navbar-collapse">
                                         <div class="nav-inner">
                                             <ul class="nav main-menu menu navbar-nav">
-                                                <li class="active"><a href="{{ url('/') }}">Home</a></li>
+                                                <li class="active"><a href="{{ url('/') }}">Accueil</a></li>
                                                 <li><a href="{{ route('more.product') }}">Produits</a></li>
                                                 <li><a href="{{ url('/contact') }}">Contactez-nous</a></li>
                                             </ul>
@@ -321,8 +321,193 @@
         <!--/ End Header Inner -->
     </header>
     <!--/ End Header -->
-
+<br>
+<br>
+<br>
+<br>
     @yield('content')
+<br>
+<br>
+<br>
+<br>
+    <!-- Start Shop Services Area -->
+    <section class="shop-services section home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Service -->
+                    <div class="single-service">
+                        <i class="ti-rocket"></i>
+                        <h4>Livraison Gratuite</h4>
+                        <p>Commander plus que 1000 Dhs</p>
+                    </div>
+                    <!-- End Single Service -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Service -->
+                    <div class="single-service">
+                        <i class="ti-reload"></i>
+                        <h4>Retour gratuit</h4>
+                        <p>Dans 30 Jours</p>
+                    </div>
+                    <!-- End Single Service -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Service -->
+                    <div class="single-service">
+                        <i class="ti-lock"></i>
+                        <h4>Paiement sécurisé</h4>
+                        <p>100% Paiement sécurisé</p>
+                    </div>
+                    <!-- End Single Service -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Service -->
+                    <div class="single-service">
+                        <i class="ti-tag"></i>
+                        <h4>Meilleur prix</h4>
+                        <p>Produit garanti</p>
+                    </div>
+                    <!-- End Single Service -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Shop Services Area -->
+
+    <!-- Start Shop Newsletter  -->
+    <section class="shop-newsletter section">
+        <div class="container">
+            <div class="inner-top">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 col-12">
+                        <!-- Start Newsletter Inner -->
+                        <div class="inner">
+                            <h4>newsletter</h4>
+                            <p>Abonnez-vous à notre newsletter et obtenez<span> 10% </span>sur votre premier achat</p>
+                            <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+                                <input name="EMAIL" placeholder="Votre adresse E-Mail" required="" type="email">
+                                <button class="btn">s'abonner</button>
+                            </form>
+                        </div>
+                        <!-- End Newsletter Inner -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Shop Newsletter -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close"
+                            aria-hidden="true"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
+
+    <!-- Start Footer Area -->
+    <footer class="footer">
+        <!-- Footer Top -->
+        <div class="footer-top section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer about">
+                            <div class="logo">
+                                <a href="index.html"><img src="{{ asset('/style/images/logo2.png') }}" alt="#"></a>
+                            </div>
+                            <p class="text">De nos jours, de nombreux artisans et associations d'industries
+                                traditionnelles souffrent des problèmes de commercialisation de leurs produits, ce qui
+                                est la raison de leur faillite, et de nombreux clients sont exposés à des fraudes et des
+                                fraudes en raison de leur ignorance de la source et du prix réel du produit. Par
+                                conséquent, ce site a été créé pour faciliter la relation vente-achat entre le client et
+                                le vendeur avec une assurance qualité L'authenticité de la source et la présentation du
+                                produit au plus grand nombre.</p>
+                            <p class="call">Vous avez une question? Appelez-nous 24/7<span><a href="tel:123456789">+0123
+                                        456
+                                        789</a></span></p>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer links">
+                            <h4>Information</h4>
+                            <ul>
+                                <li><a href="#">a propos de nous</a></li>
+                                <li><a href="#">Faq</a></li>
+                                <li><a href="#">Termes et conditions</a></li>
+                                <li><a href="#">Contactez-nous</a></li>
+                                <li><a href="#">Aide</a></li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer links">
+                            <h4>service client</h4>
+                            <ul>
+                                <li><a href="#">Modes de paiement</a></li>
+                                <li><a href="#">Remboursement</a></li>
+                                <li><a href="#">Retourne</a></li>
+                                <li><a href="#">livraison</a></li>
+                                <li><a href="#">politique de confidentialité</a></li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer social">
+                            <h4>Contactez-nous</h4>
+                            <!-- Single Widget -->
+                            <div class="contact">
+                                <ul>
+                                    <li>ISTA MIRLEFT</li>
+                                    <li>Maroc</li>
+                                    <li>PFF@PFF.PFF</li>
+                                    <li>+012 3456 7890</li>
+                                </ul>
+                            </div>
+                            <!-- End Single Widget -->
+                            <ul>
+                                <li><a href="#"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#"><i class="ti-twitter"></i></a></li>
+                                <li><a href="#"><i class="ti-flickr"></i></a></li>
+                                <li><a href="#"><i class="ti-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Top -->
+        <div class="copyright">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="left">
+                                <p>Copyright © 2021 <a href="#" target="_blank">Harftna</a> - Tous les droits sont
+                                    réservés.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /End Footer Area -->
 
     @include('notify::messages')
     @notifyJs

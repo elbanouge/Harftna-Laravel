@@ -45,7 +45,7 @@ class ProductController extends Controller
             'subcategory_id' => $request->subcategory
 
         ]);
-        notify()->success('Product created successfully!');
+        notify()->success(' Produit bien crée. ');
         return redirect()->back();
     }
 
@@ -81,7 +81,7 @@ class ProductController extends Controller
 
             $product->save();
         }
-        notify()->success('Product updated successfully!');
+        notify()->success('Produit bien modifié.');
         return redirect()->route('product.index');
     }
 
@@ -92,7 +92,7 @@ class ProductController extends Controller
         $filename = $product->image;
         $product->delete();
         Storage::delete($filename);
-        notify()->success('Product deleted successfully!');
+        notify()->success('Produit bien supprimée.');
         return redirect()->route('product.index');
     }
 

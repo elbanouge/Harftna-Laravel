@@ -32,14 +32,14 @@ class SliderController extends Controller
             'name' => $request->name,
             'url' => $request->url
         ]);
-        notify()->success('Image uploaded successfully!');
+        notify()->success('Image bien ajouter');
         return redirect()->back();
     }
 
     public function destroy($id)
     {
         Slider::find($id)->delete();
-        notify()->success('Image deleted successfully!');
+        notify()->success('Image bien suprimée');
         return redirect()->back();
     }
 }

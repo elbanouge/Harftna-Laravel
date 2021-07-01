@@ -19,6 +19,5 @@
         .inset-0 {
             top: auto !important;
         }
-
     </style>
 </head>
